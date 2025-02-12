@@ -1,0 +1,29 @@
+  {% if block.settings.short_description != blank %}
+              <div class="short-description  add-read-more show-less-content"  data-char-limit="{{ block.settings.char_limnit}}">
+                {{ block.settings.short_description }}
+              </div>
+            {% endif %}
+
+
+
+            {
+      "type": "short_description",
+      "name": "Short Description",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "short_description",
+          "label": "Short Description"
+        },
+        {
+            "type": "range",
+            "id": "char_limnit",
+            "label": "Charecheter Limit",
+            "min": 12,
+            "max": 400,
+            "step": 4,
+            "default": 100,
+            "unit": "Ch"
+          }
+      ]
+    },
